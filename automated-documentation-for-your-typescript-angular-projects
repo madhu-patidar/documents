@@ -1,0 +1,42 @@
+Documenting your code is as important as writing readable code. It is futuristic aspect to make the understanding of your code a “Bed of Roses” for new developers . Well documented code is a boon specially when you are working on cutting edge software development languages.
+
+Well documented code is a must, but is it worth managing Confluence pages or Google Docs to document your code and component work flows ??
+I somewhere heard that “Don’t document your code. Code your documentation” and found it sensible. I don’t like investing more time on documentation than coding.
+
+Then what to do ?
+
+Don’t document your code. Code your documentation!
+What if you have a way to automatically document your code in a beautifully presentable format ? And what if this automated documentation process comes to your project by investing a minute or two ??
+
+So without wasting your precious time, lets start with what can you do ?
+
+For Automated Documentation of your Angular/TypeScript Project you can use a superb tool called Compodoc .
+
+Compodoc, is available as a npm module and you can use it as following:
+
+In your Angular/TypeScript project ‘s root, run following command:
+
+	npm install @compodoc/compodoc --save-dev
+
+This will install compodoc globally on your system.
+
+Add script in package.json as following:
+
+	"compodoc": "compodoc",
+	"generate-docs":"compodoc -p src/tsconfig.app.json",
+	"serve-docs":"compodoc -s src/tsconfig.app.json",
+
+Note: You can specify a different tsconfig file if you have it with another name or at another location.
+You are almost done setting up document automation for your project.
+
+In order to generate documentation of your project, run following command:
+
+	npm run generate-docs
+
+Generated documentation can be seen by launching index.html from generated coverage folder in your browser. You can also generate and serve documentation on local server, i.e. http://127.0.0.1:8080
+
+	npm run serve-docs
+
+Yuppy..you are done!!
+
+
